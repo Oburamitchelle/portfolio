@@ -1,53 +1,145 @@
 #root {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  padding: 2rem;
   text-align: center;
   width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
+  --primary-color: #020202;
+  --secondary-color: #048173;
+  --surface-color: #373737;
+  --accent-color: #9fe0c3;
+  --neutral-color: #fafafa;
+  --semantic-color: #f59e0b;
+}
+body{
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flexbox;
 }
 .nav-container {
   display: flex;
+  margin: 0;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  padding: 0;
+  z-index: 1;
+  position: relative;
   max-width: 1200px;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
   margin: 0 auto;
+  overflow: hidden;
+  background-color: transparent;
 }
 .nav-logo {
   display: flex;
+  position: relative;
   align-items: center;
-  text-decoration: none;
+  margin: 0px 10px 0px;
+
 }
 .mylogo{
   width: auto;
   height: 6em;
-  padding: 1.5em;
+  position: relative;
+  margin-top: 10px;
+  border-radius: 50%;
+  padding: 0;
   will-change: filter;
   transition: filter 300ms;
 }
 .nav-bar {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
+  position: relative;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
   box-Shadow: '0 2px 4px rgba(0,0,0,0.1)',
+}
+.nav-bar ul{
+  background-color: transparent;
+}
+.nav-bar ul li {
+  display: inline-block;
+  background-color: transparent;
+  margin-left: 15px;
+  position: relative;
+
 }
 .container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-position: center;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+  gap: 10rem;
   margin: 0;
-  gap: 2rem;
-  padding: 2rem;
+  padding: 10px 20px 30px;
 }
-.hero-image{
+.hero-content{
+  align-items: center;
+  justify-content: center;
+}
+.hero-content .hero-text{
+  text-align: left;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+}
+.hero-content .hero-text h3 {
+  height: 20px;
+  margin-top: 0;
+}
+.hero-content .hero-text h1{
+  height: 50px;
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.hero-content .hero-text h1 span{
+  color: var(--secondary-color);
+  font-size: 55px;
+}
+.hero-content .hero-text p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.hero-content .btn-sci{
+  margin-bottom: 20px;
+  justify-content: baseline;
+}
+.hero-content .btn-sci a{
+  display: inline-block;
+  gap: 4 rem;
+  margin: 20px;
+}
+.hero-content .btn-sci .btn{
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+.hero-image .image-box{
+  width: 30vw;
+  height: 38vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.hero-image .image-box .image-item{
+  position: relative;
   width: 100%;
-  border-radius: 8px;
-  height: auto;
-  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-image .image .image-item img{
+  position: absolute;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 .hero-text{
   flex: 1;
@@ -78,7 +170,140 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #006666);
 }
+.project-container{
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  color: yellow;
+  padding: 2px;
+}
+.project-container .project-box{
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.project-container .project-box .project-grid{
+  justify-content: center;
+  margin-top: 0;
+  display: flex;
+  color: red;
+}
+.project-container .project-box .project-grid .project-card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: red;
+  overflow: hidden;
+  display: inline-block;
+}
+.project-container .project-grid .project-card .project-data{
+  margin: 0;
+  font-size: 25px;
+  padding: 5px;
+  align-items: center ;
+}
+.project-container .project-grid .project-card .project-image{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-container .project-grid .project-card img{
+  position: relative;
+  background-position: cover;
+  height: 20vw;
+  width: 10vw;
+  object-fit: cover;
+}
+.project-container .button{
+  align-items: center;
+}
+.project-container .button a button{
+  color: #020202;
+  background: var(--surface-color);
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
 
+}
+.contact-container{
+  display: inline-block;
+  margin: 0;
+}
+.contact-container h2{
+  font-size: 2rem;
+}
+.contact-container h3{
+  font-size: 20px;
+}
+.contact-container form{
+  margin: 10px 0px 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact-container form label{
+  font-size: 22px;
+  display: flex;
+  margin: 0;
+}
+.contact-container form input{
+  font-size: 20px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+.contact-container .text-area{
+  padding: 30px;
+  height: 50px;
+}
+.contact-container form input:focus{
+  color: var(--primary-color);
+  background: var(--accent-color);
+}
+.contact-container form button{
+  background: var(--secondary-color);
+  padding: 15px;
+  font-size: 20px;
+  color: var(--surface-color);
+  border-radius: 30px;
+}
+.contact-container form button:hover{
+  color: var(--primary-color);
+  background: var(--semantic-color);
+}
+.contact-container p{
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.contact-container .quick-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+.contact-container .quick-links a{
+  display: inline-block;
+  background-color: transparent;
+  margin-left: 20px; 
+  border-radius: 50%;
+  height: 30px;
+  position: relative;
+}
+.footer-container{
+  background: var(--secondary-color);
+  color: var(--neutral-color);
+  margin: 5px 0px 0px;
+}
 @keyframes loo-spin {
   from {
     transform: rotate(0deg);
